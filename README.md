@@ -28,3 +28,23 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+2022-07
+	2022-07-05 
+		- Dotnet 6.0 테스트
+		- ORACLE VM 환경 재정리 (VM 은 삭제하고 DEV로 만들자)
+		- DEV (오라클리눅스이미지) 에서 외부 접속 가능하도록 환경설정 안됨
+		- NGINX 설치하여 dotnet 띄워두기 해볼것
+	2022-07-06 
+		- https://hplayground.tistory.com/105
+		- Sudo npm run build
+		- Sudo ngynx -s reload
+		- VM 들 변경
+		- Vue.js 환경설정
+	2022-07-08 
+		- Npm run dev
+		- Npm start
+		- npm instal axios  
+        - root /var/www/html/mj-web/dist;
