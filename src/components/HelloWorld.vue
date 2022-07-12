@@ -9,6 +9,15 @@
       <li>
         <button v-on:click="onMigrateData">적재</button>
       </li>
+      <li>
+      <button v-on:click="onMigrateData2">적재2</button>
+      </li>
+      <li>
+      <button v-on:click="onMigrateData3">적재3</button>
+      </li>
+      <li>
+      <button v-on:click="onMigrateData4">적재4</button>
+      </li>
     </ul>
       <h1>상태 : {{ message }}</h1>
   </div>
@@ -29,7 +38,7 @@ export default {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
-        console.log(error)
+        this.message = error
       })
     },
 
@@ -38,7 +47,34 @@ export default {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
-        console.log(error)
+        this.message = error
+      })
+    },
+
+    onMigrateData2: function () {
+      this.$axios.get('http://10.0.0.203:5207/WeatherForecast').then(response => {
+        console.log('### response: ' + JSON.stringify(response))
+        this.message = response.data
+      }).catch(error => {
+        this.message = error        
+      })
+    },
+
+    onMigrateData3: function () {
+      this.$axios.get('https://193.122.127.59:7030/WeatherForecast').then(response => {
+        console.log('### response: ' + JSON.stringify(response))
+        this.message = response.data
+      }).catch(error => {
+        this.message = error
+      })
+    },
+
+    onMigrateData4: function () {
+      this.$axios.get('http://193.122.127.59:5207/WeatherForecast').then(response => {
+        console.log('### response: ' + JSON.stringify(response))
+        this.message = response.data
+      }).catch(error => {
+        this.message = error
       })
     }
   }
