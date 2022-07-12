@@ -34,7 +34,7 @@ export default {
     },
 
     onMigrateData: function () {
-      this.$axios.get('https://localhost:7030/WeatherForecast').then(response => {
+      this.$axios.get('http://10.0.0.203:7030/WeatherForecast').then(response => {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
