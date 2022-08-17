@@ -51,3 +51,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 	2022-07-13
 	    - front -> back 호출이 안됨, 아마도 방화벽 문제일것 같음
+
+		npm install vue-axios-cors

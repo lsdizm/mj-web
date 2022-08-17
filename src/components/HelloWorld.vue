@@ -7,7 +7,7 @@
         <button v-on:click="onTest">API 호출 TEST</button>
       </li>
       <li>
-        <button v-on:click="onMigrateData">적재</button>
+        <button v-on:click="onMigrateData">QueryList</button>
       </li>
       <li>
       <button v-on:click="onMigrateData2">적재2</button>
@@ -43,7 +43,7 @@ export default {
     },
 
     onMigrateData: function () {
-      this.$axios.get('https://10.0.0.203:7030/WeatherForecast').then(response => {
+      this.$axios.get('https://localhost:7030/queries').then(response => {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
@@ -52,7 +52,7 @@ export default {
     },
 
     onMigrateData2: function () {
-      this.$axios.get('http://10.0.0.203:5207/WeatherForecast').then(response => {
+      this.$axios.get('http://localhost:7031/queries').then(response => {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
