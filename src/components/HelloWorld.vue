@@ -7,17 +7,15 @@
         <button v-on:click="onTest">API 호출 TEST</button>
       </li>
       <li>
-        <button v-on:click="onMigrateData">QueryList</button>
+        <button v-on:click="onMigrateData">localhost</button>
       </li>
       <li>
-      <button v-on:click="onMigrateData2">적재2</button>
+      <button v-on:click="onMigrateData2">내부IP</button>
       </li>
       <li>
-      <button v-on:click="onMigrateData3">적재3</button>
+      <button v-on:click="onMigrateData3">외부ID</button>
       </li>
-      <li>
-      <button v-on:click="onMigrateData4">적재4</button>
-      </li>
+            
     </ul>
       <h1>상태 : {{ message }}</h1>
   </div>
@@ -52,7 +50,7 @@ export default {
     },
 
     onMigrateData2: function () {
-      this.$axios.get('http://localhost:7031/queries').then(response => {
+      this.$axios.get('https://10.0.0.203:7030/queries').then(response => {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
@@ -61,7 +59,7 @@ export default {
     },
 
     onMigrateData3: function () {
-      this.$axios.get('https://193.122.127.59:7030/WeatherForecast').then(response => {
+      this.$axios.get('https://193.122.127.59:7030/queries').then(response => {
         console.log('### response: ' + JSON.stringify(response))
         this.message = response.data
       }).catch(error => {
@@ -69,14 +67,14 @@ export default {
       })
     },
 
-    onMigrateData4: function () {
-      this.$axios.get('http://193.122.127.59:5207/WeatherForecast').then(response => {
-        console.log('### response: ' + JSON.stringify(response))
-        this.message = response.data
-      }).catch(error => {
-        this.message = error
-      })
-    }
+    // onMigrateData4: function () {
+    //   this.$axios.get('http://193.122.127.59:5207/WeatherForecast').then(response => {
+    //     console.log('### response: ' + JSON.stringify(response))
+    //     this.message = response.data
+    //   }).catch(error => {
+    //     this.message = error
+    //   })
+    // }
   }
 }
 </script>

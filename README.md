@@ -1,3 +1,22 @@
+[환경설정]
+     node 설치
+     vue.js 설치
+
+	 nginx 루트를 mj-web 의 배포 위치로 설정함 (나중에는 그냥 해야할듯)
+
+
+[서버 방화벽 오픈]
+     
+
+[개발 완료후 배포]
+     git pull 하고
+	- Sudo npm run build (안되면 npm install)
+	- Sudo ngynx -s reload
+
+
+
+
+
 # mj-web
 
 > A Vue.js project
