@@ -10,8 +10,8 @@
 
 [개발 완료후 배포]
      git pull 하고
-	- Sudo npm run build (안되면 npm install)
-	- Sudo ngynx -s reload
+	sudo npm run build (안되면 npm install)
+	sudo ngynx -s reload
 
 
 
